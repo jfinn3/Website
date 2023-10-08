@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#3E505C;
+    color: white;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    text-align: center;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 50px;
+    transition: .5s;
+
+}
+.navbar a:hover,
+.navbar a.active{
+    color:#005983;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 8rem 15rem;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+    
+
+}
+
+.about-content{
+    width: 45%;
+}
+
+.about-content h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+.about-content h4{
+    text-align: left;
+    font-size: 9999;
+
+}
+
+.about-content h3{
+    font-size: 30px;
+    font-weight: 500;
+    color: #005983;
+}
+
+.skills{
+    width: 45%;
+}
+.skills h3{
+    font-size: 30px;
+    font-weight: 500;
+    color: #005983;
+}
+
+.skills p {
+    font-size: 40px;
+}
+
+.projects{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    justify-content: center;
+
+}
+.project-content{
+    max-width: 500px;
+}
+
+.project-content h1{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.project-content h3{
+    font-size: 30px;
+    font-weight: 500;
+    color: #005983;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    justify-content: center;
+
+}
+.contact-content h1{
+    text-align: center;
+    font-size: 50px;
+}
+ 
+/*CONTACT BUTTONS*/
+
+.linkedin-button {
+   
+    display: inline-block;
+    background:transparent; 
+    
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 64px;
+}
+
+
+.linkedin-button:hover {
+    background-color: #005983; 
+}
+
+.email-button {
+    display: inline-block;
+    background:transparent; 
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 64px;
+}
+
+
+.email-button:hover {
+    background-color: #005983; 
+}
+
+.github-button {
+    display: inline-block;
+    background:transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 64px;
+}
+
+
+.github-button:hover {
+    background-color: #005983; 
+}
+
+
+/*TITLE ANIMATION*/
+.titleanimation {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3E505C;
+  }
+  
+  .text {
+    position: relative;
+    font-size:75px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 100%;
+    color: #fff;
+  }
+  
+  .text::before {
+    content: attr(data-msg);
+    filter: blur(3px);
+  }
+  
+  .text::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: calc(100% + 4px);
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    animation: moveLeft 3s linear infinite alternate;
+  }
+  
+  .text--content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    overflow: hidden;
+    background-color: #3E505C;
+    animation: moveLeft 3s linear infinite alternate;
+  }
+  
+  .text--data {
+    animation: moveRight 3s linear infinite alternate;
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    100% {
+      transform: translateX(500px);
+    }
+  }
+  
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    100% {
+      transform: translateX(-500px);
+    }
+}
